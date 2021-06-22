@@ -7,9 +7,11 @@
     <%= csp_meta_tag %>
     <%= vite_client_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= vite_javascript_tag 'application' %>
-    <%= vite_stylesheet_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%#= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+
+    <%= vite_javascript_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= vite_stylesheet_tag 'application.css', 'data-turbo-track': 'reload' %>
   </head>
 
   <body>

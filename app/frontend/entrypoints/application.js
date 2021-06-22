@@ -1,15 +1,11 @@
 // @https://vite-ruby.netlify.app/guide/rails
+import "vite/dynamic-import-polyfill"
 
 import '@rails/ujs'
-
-import Turbolinks from 'turbolinks'
+import "@hotwired/turbo-rails"
 // import ActiveStorage from '@rails/activestorage'
 
 // Import all channels.
 import.meta.globEager('./**/*_channel.js')
 
-Turbolinks.start()
 // ActiveStorage.start()
-
-// Example: Import a stylesheet in app/frontend/index.css
-// import '~/index.css'

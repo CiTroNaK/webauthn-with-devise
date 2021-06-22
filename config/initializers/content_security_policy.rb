@@ -10,7 +10,8 @@ Rails.application.config.content_security_policy do |policy|
   policy.img_src     :self, :https, :data
   policy.object_src  :none
   policy.script_src  :self, :https
-  policy.style_src   :self, :https
+  policy.style_src   :self, :https, :unsafe_inline
+  policy.connect_src :self, :https
 
   # Allow @vite/client to hot reload changes in development
   policy.script_src *policy.script_src, :unsafe_eval, "http://localhost:3036" if Rails.env.development?
