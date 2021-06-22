@@ -12,3 +12,6 @@ import "@hotwired/turbo-rails"
 
 // Stimulus Controllers
 import '../controllers/index'
+
+// Icons
+import '../others/icons'
