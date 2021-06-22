@@ -1,0 +1,4 @@
+https://github.com/heroku/heroku-buildpack-activestorage-preview
+https://github.com/gaffneyc/heroku-buildpack-jemalloc.git
+https://github.com/heroku/heroku-buildpack-nodejs#v175
+https://github.com/heroku/heroku-buildpack-ruby.git

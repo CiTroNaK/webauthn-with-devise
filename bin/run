@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+[[ -z "${RAILS_ENV}" ]] && ENV='development' || ENV="${RAILS_ENV}"
+
+if [ "$ENV" = "development" ]; then
+  overmind start -f Procfile.dev -P 10 -r web,vite
+else
+  exit 1
+fi

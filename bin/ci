@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -e
+
+echo "[ bin/ci ] Analyzing code style"
+bundle exec standardrb
+
+echo "[ bin/ci ] Running tests"
+echo "skipped"
+# bundle exec rspec
+
+echo "[ bin/ci ] Analyzing code for security vulnerabilities."
+echo "[ bin/ci ] Output will be in tmp/brakeman.html,"
+echo "[ bin/ci ] which can be opened in your browser."
+bundle exec brakeman -q -o tmp/brakeman.html
+
+echo "[ bin/ci ] Analyzing Ruby gems for security vulnerabilities"
+bundle exec bundle audit check --update
+
+echo "[ bin/ci ] Analyzing Node modules for security vulnerabilities"
+
+# Turn off auto-exit on command failures
+# because yarn will exit nonzero and we need
+# to examine the result before deciding if we should exit
+
+set +e
+yarn audit --level=moderate
+yarn_exit_code=$?
+set -e
+
+if [ $yarn_exit_code -lt 4 ]; then
+  echo "[ bin/ci ] Vulnerabilities were found, but only at"
+  echo "[ bin/ci ] informational or low priority level"
+  echo "[ bin/ci ] These do not need to be fixed, but you"
+  echo "[ bin/ci ] should look into it."
+  echo "[ bin/ci ] To see them run 'yarn audit'"
+else
+  exit 1
+fi
+
+echo "[ bin/ci ] Done"

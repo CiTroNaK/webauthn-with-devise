@@ -6,7 +6,7 @@ import "@hotwired/turbo-rails"
 // import ActiveStorage from '@rails/activestorage'
 
 // Import all channels.
-import.meta.globEager('./**/*_channel.js')
+// import.meta.globEager('./**/*_channel.js')
 
 // ActiveStorage.start()
 

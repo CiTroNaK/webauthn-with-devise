@@ -28,9 +28,6 @@
 /public/assets
 .byebug_history
 
-# Ignore master key for decrypting credentials and more.
-/config/master.key
-
 # Vite Ruby
 /public/vite
 /public/vite-dev
@@ -38,3 +35,10 @@
 /node_modules
 *.local
 .DS_Store
+
+# The .env file is used for both dev and test and creates more problems than it solves
+.env
+
+# .env.*.local files are where we put actual secrets we need for dev and test, so
+# we really don't want this in version control
+.env.*.local
