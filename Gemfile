@@ -16,6 +16,12 @@ gem "bundler-audit"
 # lograge changes Rails' logging to a more traditional one-line-per-event format
 gem "lograge"
 
+# Authentication
+gem "devise"
+
+# Better console
+gem "pry-rails"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.3", ">= 6.1.3.1"
 # Use postgresql as the database for Active Record
@@ -52,6 +58,9 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   # gem 'rack-mini-profiler', '~> 2.0'
   gem "listen", "~> 3.3"
+
+  # Emails in development
+  gem "letter_opener"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

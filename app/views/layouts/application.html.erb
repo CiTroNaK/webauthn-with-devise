@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebAuthn with Devise</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= vite_client_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
-    <%#= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
-
-    <%= vite_javascript_tag 'application', 'data-turbo-track': 'reload' %>
-    <%= vite_stylesheet_tag 'application.css', 'data-turbo-track': 'reload' %>
+    <%= render partial: 'layouts/head' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <%= yield :title %>
+        </h2>
+      </div>
+
+      <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
