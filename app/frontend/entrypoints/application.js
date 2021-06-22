@@ -9,3 +9,6 @@ import "@hotwired/turbo-rails"
 import.meta.globEager('./**/*_channel.js')
 
 // ActiveStorage.start()
+
+// Stimulus Controllers
+import '../controllers/index'

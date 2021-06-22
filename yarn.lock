@@ -81,6 +81,30 @@
   resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.4.tgz#b155b0e23b766fe8038cb9bc796efb55ea840c15"
   integrity sha512-pi6BTIAuMAgfh0tz9jHyKwuzT8HKWlZdfI6/pxcR+NWRuTyN9psYmxskP2QnxFehSkSuvQmQuKv3Hyrs13l3xQ==
 
+"@stimulus/core@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/core/-/core-2.0.0.tgz#140c85318d6a8a8210c0faf182223b8459348877"
+  integrity sha512-ff70GafKtzc8zQ1/cG+UvL06GcifPWovf2wBEdjLMh9xO2GOYURO3y2RYgzIGYUIBefQwyfX2CLfJdZFJrEPTw==
+  dependencies:
+    "@stimulus/mutation-observers" "^2.0.0"
+
+"@stimulus/multimap@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/multimap/-/multimap-2.0.0.tgz#420cfa096ed6538df4a91dbd2b2842c1779952b2"
+  integrity sha512-pMBCewkZCFVB3e5mEMoyO9+9aKzHDITmf3OnPun51YWxlcPdHcwbjqm1ylK63fsoduIE+RowBpFwFqd3poEz4w==
+
+"@stimulus/mutation-observers@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/mutation-observers/-/mutation-observers-2.0.0.tgz#3dbe37453bda47a6c795a90204ee8d77a799fb87"
+  integrity sha512-kx4VAJdPhIGBQKGIoUDC2tupEKorG3A+ckc2b1UiwInKTMAC1axOHU8ebcwhaJIxRqIrs8//4SJo9YAAOx6FEg==
+  dependencies:
+    "@stimulus/multimap" "^2.0.0"
+
+"@stimulus/webpack-helpers@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-2.0.0.tgz#54296d2a2dffd4f962d2e802d99a3fdd84b8845f"
+  integrity sha512-D6tJWsAC024MwGEIKlUVYU8Ln87mlrmiwHvYAjipg+s8H4eLxUMQ3PZkWyPevfipH+oR3leuHsjYsK1gN5ViQA==
+
 "@tailwindcss/aspect-ratio@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.2.1.tgz#a7ce776688b8218d9559a6918f0bccc58f0f16dd"
@@ -231,7 +255,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.1.1:
+chalk@^4.1, chalk@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
   integrity sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==
@@ -747,7 +771,7 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3:
+picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
   integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
@@ -904,6 +928,19 @@ spark-md5@^3.0.0:
   resolved "https://registry.yarnpkg.com/spark-md5/-/spark-md5-3.0.1.tgz#83a0e255734f2ab4e5c466e5a2cfc9ba2aa2124d"
   integrity sha512-0tF3AGSD1ppQeuffsLDIOWlKUd3lS92tFxcsrh5Pe3ZphhnoK+oXIBTzOAThZCiuINZLvpiLH/1VS1/ANEJVig==
 
+stimulus-vite-helpers@^1.0, stimulus-vite-helpers@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/stimulus-vite-helpers/-/stimulus-vite-helpers-1.0.4.tgz#45c35bf5e11e9f7cfb51146ae04959f5bab1029a"
+  integrity sha512-Tbe6DQFiIbHeZIxh9aVuqS2kosSHJZyatns/X00wO9BQSrL1y4+dz4wSwM3lJH0ASxAx1DwC8TCTUgvRYEIaAQ==
+
+stimulus@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-2.0.0.tgz#713c8b91a72ef90914b90955f0e705f004403047"
+  integrity sha512-xipy7BS5TVpg4fX6S8LhrYZp7cmHGjmk09WSAiVx1gF5S5g43IWsuetfUhIk8HfHUG+4MQ9nY0FQz4dRFLs/8w==
+  dependencies:
+    "@stimulus/core" "^2.0.0"
+    "@stimulus/webpack-helpers" "^2.0.0"
+
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
@@ -979,6 +1016,19 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
+vite-plugin-environment@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-environment/-/vite-plugin-environment-1.0.1.tgz#612d6e0cbc8de9e9d63883c54616c4923585e3ff"
+  integrity sha512-zosD4eipWFOLVG7DtcVKU/vCEXrAI/JzmoYihN/yR8DCBwXnL+zII0L18ko/kS7pLS0mUBlUzHa4e9sNbJu2sA==
+
+vite-plugin-full-reload@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-full-reload/-/vite-plugin-full-reload-0.2.2.tgz#7c5373590fa2b1940cb400810c3b22b7d84ece43"
+  integrity sha512-5O0b31tatFPQbhywsvfHs2fLzm1mULNTzI9UEXWRJuwxiBkg7YD1+2wqdj/RKKQk84AImsJb1YFVUr0bnEbkfQ==
+  dependencies:
+    chalk "^4.1"
+    picomatch "^2.2.2"
+
 vite-plugin-ruby@^2.0.2:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-2.0.4.tgz#3f9b1d9b2f652d33dc1fc7b70b07d6ca9deabf32"
@@ -986,6 +1036,14 @@ vite-plugin-ruby@^2.0.2:
   dependencies:
     debug "^4.3.1"
     fast-glob "^3.2.4"
+
+vite-plugin-stimulus-hmr@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-stimulus-hmr/-/vite-plugin-stimulus-hmr-1.0.1.tgz#0f3e2f83cd84476164859d33e7c4745a7b266ed5"
+  integrity sha512-gi0mNFYd1aYbQXYWt6erPE0iSbE1P0GON9+KHWJtmYuCa54LzKqLt5xWUxAfQKHIDGubXlaRIRR+6enzi/Pp8A==
+  dependencies:
+    debug "^4.3.1"
+    stimulus-vite-helpers "^1.0"
 
 vite@^2.2.3:
   version "2.3.8"
