@@ -5,8 +5,8 @@ import { config, library, dom } from '@fortawesome/fontawesome-svg-core'
 config.mutateApproach = 'sync'
 
 // Import icons
-import {faKey, faKeyboard} from '@fortawesome/free-solid-svg-icons'
-library.add(faKey, faKeyboard)
+import {faKey, faKeyboard, faPlus, faTrash} from '@fortawesome/free-solid-svg-icons'
+library.add(faKey, faKeyboard, faPlus, faTrash)
 
 // Load icons
 dom.watch()
