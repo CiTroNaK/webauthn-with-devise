@@ -2,15 +2,15 @@
   Log in
 <% end %>
 
-<%= form_with(model: resource, as: resource_name, url: session_path(resource_name), builder: DeviseFormBuilder, class: 'space-y-6') do |f| %>
+<%= form_with(model: resource, as: resource_name, url: session_path(resource_name), builder: DeviseFormBuilder, class: 'space-y-6', data: {controller: "webauthn--login", "webauthn--login-callback-value": webauthn_authentications_url, "webauthn--login-webauthn-value": webauthn_authentications_challenge_url(format: :json), action: "ajax:success->webauthn--login#auth ajax:error->webauthn--login#error"}) do |f| %>
   <div>
     <%= f.label :email %>
     <div class="mt-1">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, data: { "target-webauthn--login": "email" } %>
     </div>
   </div>
 
-  <div>
+  <div data-webauthn--login-target="password">
     <%= f.label :password %>
     <div class="mt-1">
       <%= f.password_field :password, autocomplete: "current-password" %>
@@ -34,8 +34,17 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="flex" data-webauthn--login-target="default">
     <%= f.submit "Log in" %>
+    <%= button_tag type: :button, data: { action: 'webauthn--login#toggle' }, class: "justify-center ml-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-gray-300 hover:bg-indigo-500 hover:text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out" do %>
+      <i class="fas fa-key"></i>
+    <% end %>
+  </div>
+  <div class="flex hidden" data-webauthn--login-target="webauthn">
+    <%= f.submit "Passwordless Log In" %>
+    <%= button_tag type: :button, data: { action: 'webauthn--login#toggle' }, class: "justify-center ml-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-gray-300 hover:bg-indigo-500 hover:text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out" do %>
+      <i class="fas fa-keyboard"></i>
+    <% end %>
   </div>
 <% end %>
 
